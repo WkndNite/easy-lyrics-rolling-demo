@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #000;
+    color: #666;
+    text-align: center;
+    font-size: 1rem; /* 使用rem单位以便相对缩放 */
+    line-height: 1.5;
+}
+audio {
+    width: 90%; /* 相对宽度，使其在移动设备上自动缩放 */
+    max-width: 450px; /* 保持桌面端的最大宽度 */
+    margin: 30px auto;
+    display: block;
+}
+.container {
+    height: 420px;
+    overflow: hidden;
+    padding: 0 5%; /* 添加内边距以适应小屏幕 */
+}
+
+.container ul {
+    list-style: none;
+    transition: 0.5s;
+}
+
+.container li {
+    height: 30px;
+    line-height: 30px;
+    transition: 0.2s;
+}
+
+.container li.active {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+/* 移动端优化 */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+    .container {
+        height: auto; /* 自动适应内容 */
+        padding: 0 2%; /* 减小内边距 */
+    }
+    .container li {
+        height: 35px; /* 增加行高以便更容易点击 */
+        line-height: 35px;
+    }
+}
