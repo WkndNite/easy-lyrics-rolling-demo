@@ -15,6 +15,8 @@
 3. **音频时间更新处理**: 在音频播放过程中，实时监听播放时间的变化并更新歌词显示状态，确保性能和用户体验。
 
 ## 项目结构
+
+```plain text
 .
 ├── .idea                   # 项目配置文件夹
 │   ├── .gitignore
@@ -31,15 +33,16 @@
 ├── .gitignore              # git 忽略文件
 ├── index.html              # 主 HTML 页面
 └── README.md               # 项目说明文档
+```
 
 ### 核心功能
 
-- `parseTime(timeStr)`: 将时间字符串转换为秒数。
-- `parseLrc()`: 解析 LRC 文件内容并返回时间和歌词的数组。
-- `findHighlightIndex()`: 根据当前音频时间找到高亮歌词的索引。
-- `getDOMs()`: 获取音频播放器和歌词容器的 DOM 元素。
-- `createElementEfficiency()`: 高效创建歌词列表项并添加到 DOM 中。
-- `setOffset()`: 设置歌词的滚动偏移量，并高亮当前歌词。
+-   `parseTime(timeStr)`: 将时间字符串转换为秒数。
+-   `parseLrc()`: 解析 LRC 文件内容并返回时间和歌词的数组。
+-   `findHighlightIndex()`: 根据当前音频时间找到高亮歌词的索引。
+-   `getDOMs()`: 获取音频播放器和歌词容器的 DOM 元素。
+-   `createElementEfficiency()`: 高效创建歌词列表项并添加到 DOM 中。
+-   `setOffset()`: 设置歌词的滚动偏移量，并高亮当前歌词。
 
 ### 事件监听
 
